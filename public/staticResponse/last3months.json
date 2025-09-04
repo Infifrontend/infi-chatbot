@@ -1,0 +1,18 @@
+{
+    "id": "chatcmpl-a69570ec",
+    "object": "chat.completion",
+    "created": 1753341587,
+    "model": "reportAgent-1.0.0",
+    "agent": "reportAgent",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "<p>I'm fetching the GroupRequestReport for the last 3 months. This will include 'groupRequestId', 'groupName', 'requestType', 'tripType', 'requestedDate', and 'statusOfRequest'. Would you like to add any other fields or filters?</p>"
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {}
+}

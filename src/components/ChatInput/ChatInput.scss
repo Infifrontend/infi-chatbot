@@ -1,0 +1,371 @@
+.chat-input {
+
+  position: fixed;
+  z-index: 4;
+  width: calc(100% - 280px);
+  right: 0;
+  bottom: 0;
+  padding: 16px 24px;
+  border-top: 1px solid;
+
+  &--light {
+    background: #f5f5f5;
+    border-top-color: #e8e8e8;
+  }
+
+  &--dark {
+    background: #141414;
+    border-top-color: #424242;
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 900px) {
+    padding: 12px 16px;
+    width: 100%;
+  }
+
+  @media (max-width: 575px) {
+    padding: 12px 16px;
+  }
+
+  @media (max-width: 319px) {
+    padding: 10px 12px;
+  }
+  &.cls-half-screen {
+    width: 100% !important;
+  }
+}
+
+// Inline previews container - ChatGPT style
+.cls-cb-inline-previews {
+  margin-bottom: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-height: 120px;
+  overflow-y: auto;
+  padding: 8px 12px;
+  border-radius: 8px;
+
+  &--light {
+    background: #f7f7f8;
+    border: 1px solid #e3e3e3;
+  }
+
+  &--dark {
+    background: #2f2f2f;
+    border: 1px solid #4a4a4a;
+  }
+}
+
+// Individual preview item - compact layout
+.cls-cb-preview-item {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+
+  &--light {
+    background: #ffffff;
+    border: 1px solid #e3e3e3;
+  }
+
+  &--dark {
+    background: #404040;
+    border: 1px solid #555555;
+  }
+}
+
+// Image preview container - smaller like ChatGPT
+.cls-cb-image-preview-container {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    opacity: 0.8;
+
+    .cls-cb-image-overlay {
+      opacity: 1;
+    }
+  }
+}
+
+// Image preview - smaller thumbnail
+.cls-cb-image-preview {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+}
+
+// Overlay for remove button
+.cls-cb-image-overlay {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Remove button for images
+.cls-cb-remove-btn {
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+
+  &:hover {
+    color: #ff6b6b;
+  }
+}
+
+// Non-image file card - compact design
+.cls-cb-file-card {
+  width: 140px;
+  height: 64px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  &--light {
+    background: #ffffff;
+    border: 1px solid #e3e3e3;
+  }
+
+  &--dark {
+    background: #404040;
+    border: 1px solid #555555;
+  }
+
+  .ant-card-body {
+    padding: 8px !important;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+}
+
+// File card content - horizontal layout
+.cls-cb-file-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  .cls-cb-file-info {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    flex: 1;
+
+    .cls-cb-file-icon {
+      margin-right: 6px;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+
+    .cls-cb-file-details {
+      min-width: 0;
+      flex: 1;
+
+      .cls-cb-file-name {
+        font-size: 11px;
+        font-weight: 500;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        line-height: 1.2;
+        margin-bottom: 2px;
+
+        &--light {
+          color: #1a1a1a;
+        }
+
+        &--dark {
+          color: #e8e8e8;
+        }
+      }
+
+      .cls-cb-file-size {
+        font-size: 9px;
+
+        &--light {
+          color: #737373;
+        }
+
+        &--dark {
+          color: #a3a3a3;
+        }
+      }
+    }
+  }
+}
+
+// Remove button for non-image files
+.cls-cb-remove-file-btn {
+  margin-left: 4px;
+  min-width: auto;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  border: none;
+  font-size: 10px;
+  flex-shrink: 0;
+
+  &--light {
+    color: #737373;
+    background: transparent;
+
+    &:hover {
+      color: #ef4444;
+      background: #fef2f2;
+    }
+  }
+
+  &--dark {
+    color: #a3a3a3;
+    background: transparent;
+
+    &:hover {
+      color: #f87171;
+      background: #2d1b20;
+    }
+  }
+}
+
+.input-container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+
+  /* Mobile responsive */
+  @media (max-width: 900px) {
+    max-width: 100%;
+  }
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: flex-end;
+  border: 1px solid;
+  border-radius: 24px;
+  padding: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+
+  &--light {
+    background: #ffffff;
+    border-color: #d9d9d9;
+  }
+
+  &--dark {
+    background: #262626;
+    border-color: #424242;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 575px) {
+    border-radius: 20px;
+    padding: 6px;
+  }
+
+  @media (max-width: 319px) {
+    border-radius: 16px;
+    padding: 4px;
+  }
+}
+
+.attach-button {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  margin: 0 4px;
+
+  &--light {
+    color: #666666;
+  }
+
+  &--dark {
+    color: #d9d9d9;
+  }
+}
+
+.text-area {
+  flex: 1;
+  resize: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 20px;
+  background: transparent;
+  font-family: var(--font-regular);
+  font-weight: var(--weight-regular);
+  border: none;
+  outline: none;
+  min-height: 20px;
+  max-height: 120px;
+
+  &--light {
+    color: #000000;
+  }
+
+  &--dark {
+    color: #ffffff;
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 575px) {
+    padding: 6px 10px;
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+
+  @media (max-width: 319px) {
+    padding: 4px 8px;
+    font-size: 16px;
+  }
+}
+
+.send-button {
+  height: 40px;
+  width: 40px !important;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 4px;
+  background: #4285f4;
+  border-color: #4285f4;
+  font-family: var(--font-semibold);
+  font-weight: var(--weight-semibold);
+
+  &:disabled {
+    opacity: 0.5;
+  }
+}

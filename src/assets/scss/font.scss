@@ -1,0 +1,41 @@
+@use "sass:string";
+
+@mixin font-face($font-name, $file-path) {
+    @font-face {
+        font-family: string.quote($font-name);
+        src: url("#{$file-path}.woff2") format("woff2"),
+        url("#{$file-path}.woff") format("woff");
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+}
+
+@include font-face('OpenSans-Bold', '/src/assets/Fonts/Opensans/OpenSans-Bold');
+@include font-face('OpenSans-Light', '/src/assets/Fonts/Opensans/OpenSans-Light');
+@include font-face('OpenSans-Medium', '/src/assets/Fonts/Opensans/OpenSans-Medium');
+@include font-face('OpenSans-Regular', '/src/assets/Fonts/Opensans/OpenSans-Regular');
+@include font-face('OpenSans-SemiBold', '/src/assets/Fonts/Opensans/OpenSans-SemiBold');
+@include font-face('Roboto-Bold', '/src/assets/Fonts/Roboto/Roboto-Bold');
+@include font-face('Roboto-Light', '/src/assets/Fonts/Roboto/Roboto-Light');
+@include font-face('Roboto-Medium', '/src/assets/Fonts/Roboto/Roboto-Medium');
+@include font-face('Roboto-Regular', '/src/assets/Fonts/Roboto/Roboto-Regular');
+@include font-face('Inter-Light', '/src/assets/Fonts/Inter/Inter-Light');
+@include font-face('Inter-Medium', '/src/assets/Fonts/Inter/Inter-Medium');
+@include font-face('Inter-Regular', '/src/assets/Fonts/Inter/Inter-Regular');
+@include font-face('Poppins-Bold', '/src/assets/Fonts/Poppins/Poppins-Bold');
+@include font-face('Poppins-Light', '/src/assets/Fonts/Poppins/Poppins-Light');
+@include font-face('Poppins-Medium', '/src/assets/Fonts/Poppins/Poppins-Medium');
+@include font-face('Poppins-Regular', '/src/assets/Fonts/Poppins/Poppins-Regular');
+@include font-face('Poppins-SemiBold', '/src/assets/Fonts/Poppins/Poppins-SemiBold');
+@include font-face('Flynas-Bold', '/src/assets/Fonts/Flynas/Flynas-Bold');
+@include font-face('Flynas-Light', '/src/assets/Fonts/Flynas/Flynas-Light');
+@include font-face('Flynas-Regular', '/src/assets/Fonts/Flynas/Flynas-Regular');
+@include font-face('Flynas-SemiBold', '/src/assets/Fonts/Flynas/Flynas-SemiBold');
+@include font-face('Bauhaus-Medium', '/src/assets/Fonts/bauhaus_std_fonts/bauhaus_std_medium');
+@include font-face('jotia_bold', '/src/assets/Fonts/jotia/jotia_bold');
+@include font-face('jotia_medium', '/src/assets/Fonts/jotia/jotia_medium');
+@include font-face('jotia_regular', '/src/assets/Fonts/jotia/jotia_regular');
+@include font-face('graphik_bold', '/src/assets/Fonts/graphik/graphik_bold');
+@include font-face('graphik_medium', '/src/assets/Fonts/graphik/graphik_medium');
+@include font-face('graphik_regular', '/src/assets/Fonts/graphik/graphik_regular');

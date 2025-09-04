@@ -1,0 +1,283 @@
+@use "./theme.scss";
+@use './assets/scss/font.scss';
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Force theme font variables to override any inherited styles */
+* {
+  font-family: var(--font-regular) !important;
+}
+
+.ant-btn {
+  font-family: var(--font-semibold) !important;
+  font-weight: var(--weight-semibold) !important;
+}
+
+.ant-typography,
+.ant-typography p,
+.ant-typography div,
+.ant-typography span {
+  font-family: var(--font-regular) !important;
+}
+
+/* Global font family settings - use CSS variables from theme */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: var(--font-regular) !important;
+}
+
+.last-message-avatar.ai-avatar {
+  animation: avatarGlow 3s ease-in-out infinite;
+}
+
+/* Input area styling */
+.chat-textarea:focus {
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.chat-textarea .ant-input {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+/* File preview item hover effects */
+.file-preview-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.ant-theme-dark .file-preview-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Button hover effects */
+.attachment-btn:hover {
+  background: rgba(24, 144, 255, 0.1) !important;
+  color: #1890ff !important;
+}
+
+.file-remove-btn:hover {
+  background: rgba(255, 77, 79, 0.1) !important;
+  transform: scale(1.1);
+}
+
+.download-btn:hover {
+  background: rgba(24, 144, 255, 0.1) !important;
+  transform: scale(1.1);
+}
+
+/* Send button improvements */
+.send-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(24, 144, 255, 0.3);
+}
+
+/* Avatar hover effects */
+.message-avatar:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+}
+
+/* Responsive file preview */
+@media (max-width: 768px) {
+  .file-preview-container {
+    margin: 0 -8px 16px -8px;
+    border-radius: 8px;
+  }
+
+  .file-preview-container > div:last-child {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Responsive design improvements */
+@media (max-width: 768px) {
+  .ant-layout-header {
+    padding: 0 16px !important;
+  }
+
+  .ant-layout-content > div:first-child > div:first-child {
+    padding: 16px !important;
+  }
+
+  .ant-layout-content > div:last-child {
+    padding: 16px !important;
+  }
+
+  /* Improve button sizing on tablets */
+  .ant-btn {
+    min-height: 44px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 575px) {
+  /* Mobile-first responsive adjustments */
+  .ant-layout-header {
+    padding: 0 12px !important;
+  }
+
+  .ant-layout-content > div:first-child > div:first-child {
+    padding: 12px !important;
+  }
+
+  .ant-layout-content > div:last-child {
+    padding: 12px !important;
+  }
+
+  /* Improve touch targets */
+  .ant-btn {
+    min-height: 48px;
+    font-size: 16px;
+    padding: 12px 16px;
+  }
+
+  /* Better typography scaling */
+  body {
+    font-size: 16px;
+  }
+
+  /* Ensure readable text sizes */
+  .ant-typography {
+    font-size: 16px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .ant-layout-header {
+    padding: 0 8px !important;
+  }
+
+  .ant-layout-content > div:first-child > div:first-child {
+    padding: 8px !important;
+  }
+
+  .ant-layout-content > div:last-child {
+    padding: 8px !important;
+  }
+}
+
+@media (max-width: 320px) {
+  /* Very small device optimizations */
+  .ant-btn {
+    min-height: 44px;
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  /* Compact spacing */
+  .ant-layout-content > div:first-child > div:first-child {
+    padding: 6px !important;
+  }
+
+  .ant-layout-content > div:last-child {
+    padding: 6px !important;
+  }
+}
+
+/* Smooth transitions for responsive changes */
+.chat-container,
+.sidebar,
+.main-chat-area,
+.chat-header {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Ensure accessibility on mobile */
+@media (max-width: 575px) {
+  /* Larger touch targets */
+  button,
+  .ant-btn,
+  [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Better focus indicators */
+  *:focus {
+    outline: 2px solid #4285f4;
+    outline-offset: 2px;
+  }
+}
+
+/* Ensure consistent input styling */
+.ant-input {
+  transition: all 0.2s ease-in-out;
+}
+
+.ant-input:focus,
+.ant-input-focused {
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2) !important;
+  border-color: #1890ff !important;
+}
+
+/* File upload styling */
+.ant-upload {
+  display: block !important;
+}
+
+.ant-upload-btn {
+  padding: 0 !important;
+  border: none !important;
+  background: transparent !important;
+}
+
+/* File preview animations */
+.file-preview-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.file-preview-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.file-preview-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.file-preview-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Button consistency */
+.ant-btn-primary {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Focus states */
+.ant-input:focus,
+.ant-input-focused,
+.chat-textarea:focus {
+  border-color: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Enhanced file hover effects */
+.file-icon-container:hover .view-overlay {
+  display: flex !important;
+}
+
+.file-info-container:hover .file-name-overlay {
+  display: flex !important;
+}
+
+.file-name:hover {
+  color: #1890ff !important;
+}
+
+.ant-theme-dark .file-name:hover {
+  color: #40a9ff !important;
+}

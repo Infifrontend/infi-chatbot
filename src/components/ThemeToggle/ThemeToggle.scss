@@ -1,0 +1,20 @@
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+
+  .ant-btn {
+    border: 1px solid var(--menu-border);
+    background: var(--background);
+    color: var(--text-color);
+    font-family: var(--font-semibold);
+    font-size: var(--button-size);
+    font-weight: var(--weight-semibold);
+
+    &:hover {
+      border-color: var(--ant-primary-color);
+      color: var(--ant-primary-color);
+    }
+  }
+}

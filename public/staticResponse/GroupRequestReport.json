@@ -1,0 +1,18 @@
+{
+  "id": "chatcmpl-a1abe317",
+  "object": "chat.completion",
+  "created": 1753341520,
+  "model": "reportAgent-1.0.0",
+  "agent": "reportAgent",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "<p>No problem. Do you have any specific filters or fields you would like to apply for the GroupRequestReport?</p>"
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {}
+}

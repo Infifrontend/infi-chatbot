@@ -1,0 +1,7 @@
+
+{
+  "type": "binary",
+  "contentType": "text/csv",
+  "filename": "report.csv",
+  "data": "TmFtZSxBZ2UsRW1haWwsRGVwYXJ0bWVudApKb2huIERvZSwyOCxqb2huLmRvZUBleGFtcGxlLmNvbSxJVApKYW5lIFNtaXRoLDMyLGphbmUuc21pdGhAZXhhbXBsZS5jb20sTWFya2V0aW5nCk1pa2UgSm9obnNvbiwyNSxtaWtlLmpvaG5zb25AZXhhbXBsZS5jb20sRmluYW5jZQpTYXJhaCBXaWxzb24sMjkscy53aWxzb25AZXhhbXBsZS5jb20sSFI="
+}

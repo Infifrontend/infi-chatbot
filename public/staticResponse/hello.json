@@ -1,0 +1,18 @@
+{
+  "id": "chatcmpl-d722fc29",
+  "object": "chat.completion",
+  "created": 1753341306,
+  "model": "reportAgent-1.0.0",
+  "agent": "reportAgent",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "<div><p>Multiple reports match your query. Please select one.</p><ul><li><strong>PaymentTrackingReport</strong> - Purpose of the report to tracking the payment details against the payment tracking request, This report contain payment tracking details and only captured paid booking informations</li><li><strong>PaymentPendingReport</strong> - The purpose of this report is to provide a comprehensive view of all payment pending requests along with detailed booking, payment, and request-related information. This report helps track pending payments for group bookings and individual requests, enabling agencies and administrators to monitor overdue amounts, payment progress, and associated timelines. It includes details like PNR, agency name, requested amount, paid amount, pending balance, departure dates, due dates, and request status, making it essential for financial reconciliation, follow-ups, and ensuring timely collections.</li><li><strong>GroupRequestReport</strong> - Provides detailed information for all group booking requests. Includes trip and group-wise data, useful for identifying frequently requested sectors, payment statuses, and requested dates.</li><li><strong>RegisteredAgentReport</strong> - This report will provide details of registered agents, including their agency information, contact details, and registration status.</li><li><strong>HelpDeskReport</strong> - This report provides a detailed view of help desk complaints raised by agents or internal teams related to booking errors, PNR issues, and system concerns. It helps track the lifecycle of issues, including who raised, resolved, or reopened them, and their current severity and resolution status. The report is useful for operational support, quality assurance, and identifying frequently reported problems.</li><li><strong>FareOverrideReport</strong> - This report provides information to track the performance of the requests for which additional discounts or charges have been applied by the analyst over the base fare derived by the fare calculation tool. Useful for analyzing overridden fares, analyst intervention, and related financial metrics.</li></ul></div>"
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {}
+}

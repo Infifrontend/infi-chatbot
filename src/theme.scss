@@ -1,0 +1,147 @@
+:root {
+  --ant-primary-color: #fd9646;
+}
+
+body {
+  // Font size variables
+  --title-size: 24px;
+  --subtitle-size: 16px;
+  --message-size: 14px;
+  --button-size: 14px;
+
+  // Font weight variables
+  --weight-regular: 400;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-regular);
+  font-weight: var(--weight-regular);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body.light {
+  --menuColor: #cdddf5;
+  --ant-primary-color: #fd9646;
+  --menu-border: rgba(5, 5, 5, 0.06);
+  --menu-border-bottom: rgba(5, 5, 5, 0.1);
+  --background: #ffffff;
+  --text-color: #000000;
+  --card-background: #ffffff;
+  --input-background: #ffffff;
+}
+
+body.dark {
+  --ant-primary-color: #fd9646;
+  --menuColor: #cdddf5;
+  --background: #181a1b;
+  --text-color: #ffffff;
+  --card-background: #2a2d2e;
+  --input-background: #2a2d2e;
+}
+
+// Theme SCSS Variables
+// Base CSS custom properties that will be overridden by theme classes
+
+:root {
+  // Default theme variables (light mode)
+  --recentAction-bg: #f5f7fa;
+  --recentAction-color: #333333;
+  --chatHeader-bg: #ffffff;
+  --chatHeader-color: #000000;
+  --conversation-bg: #ffffff;
+  --conversation-color: #111111;
+  --textarea-bg: #f0f2f5;
+  --textarea-color: #000000;
+}
+
+// Light theme variables
+body.light {
+  --recentAction-bg: #f5f7fa;
+  --recentAction-color: #333333;
+  --chatHeader-bg: #ffffff;
+  --chatHeader-color: #000000;
+  --conversation-bg: #ffffff;
+  --conversation-color: #111111;
+  --textarea-bg: #f0f2f5;
+  --textarea-color: #000000;
+}
+
+// Dark theme variables
+body.dark {
+  --recentAction-bg: #1f1f1f;
+  --recentAction-color: #eeeeee;
+  --chatHeader-bg: #141414;
+  --chatHeader-color: #ffffff;
+  --conversation-bg: #121212;
+  --conversation-color: #dddddd;
+  --textarea-bg: #1e1e1e;
+  --textarea-color: #f5f5f5;
+}
+
+// SCSS Variables for easier usage (optional mixins)
+@mixin theme-variables {
+  // Recent Action Section
+  .recent-action {
+    background-color: var(--recentAction-bg);
+    color: var(--recentAction-color);
+  }
+
+  // Chat Header Section
+  .chat-header {
+    background-color: var(--chatHeader-bg);
+    color: var(--chatHeader-color);
+  }
+
+  // Conversation Section
+  .conversation {
+    background-color: var(--conversation-bg);
+    color: var(--conversation-color);
+  }
+
+  // Textarea Section
+  .textarea {
+    background-color: var(--textarea-bg);
+    color: var(--textarea-color);
+  }
+}
+
+// Apply theme variables globally
+body {
+  @include theme-variables;
+}
+
+// Utility classes for direct usage
+.theme-recent-action-bg {
+  background-color: var(--recentAction-bg);
+}
+
+.theme-recent-action-color {
+  color: var(--recentAction-color);
+}
+
+.theme-chat-header-bg {
+  background-color: var(--chatHeader-bg);
+}
+
+.theme-chat-header-color {
+  color: var(--chatHeader-color);
+}
+
+.theme-conversation-bg {
+  background-color: var(--conversation-bg);
+}
+
+.theme-conversation-color {
+  color: var(--conversation-color);
+}
+
+.theme-textarea-bg {
+  background-color: var(--textarea-bg);
+}
+
+.theme-textarea-color {
+  color: var(--textarea-color);
+}

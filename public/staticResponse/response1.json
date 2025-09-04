@@ -1,0 +1,19 @@
+
+{
+  "id": "chatcmpl-response1",
+  "object": "chat.completion",
+  "created": 1753341587,
+  "model": "reportAgent-1.0.0",
+  "agent": "reportAgent",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "<p>Welcome to the Airline Reporting Assistant! I can help you generate comprehensive reports and analyze your airline data.</p><p>How can I assist you today?</p>"
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {}
+}
