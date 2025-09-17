@@ -13,9 +13,8 @@
   }
   /* Make container flexible for embedding */
   &.embedded {
-    height: auto;
-    min-height: 400px;
-    max-height: none;
+    // min-height: 400px;
+    height: 100vh;
   }
 
   &--light {
